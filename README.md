@@ -9,7 +9,7 @@ It is MonoBehaviour-centric. There are pros and cons to this approach.
 
 Enjoy!
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/GameView.png" width="500" />
+<img src="https://github.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/GameView.png?raw=true" width="500" />
 
 
 **Details**
