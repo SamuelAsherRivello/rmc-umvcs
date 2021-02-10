@@ -30,14 +30,14 @@ MVCS
 
 The high-level architecture is taken from the industry-standard MVCS. 
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/MVCS_Diagram.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/MVCS_Diagram.png" width="500" />
 
 Project Organization
 =============
   
 I used my own <a href="http://www.samuelasherrivello.com/unity-project-structure/" target="_blank">Project Organization</a> for project structure.
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/ProjectWindow.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/ProjectWindow.png" width="500" />
 
 
 Scene Hierarchy Organization
@@ -47,7 +47,7 @@ The hierarchy structure mimics the MVCS code structure. The hierarchy structure 
 
 
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/HierarchyWindow.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/HierarchyWindow.png" width="500" />
 
 Approach #1 - I used this. (See screenshot above)
 * App
@@ -69,7 +69,7 @@ Approach #2 - Here is an alternative approach
     * Controller
     * Service
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/BouncyBallView.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/BouncyBallView.png" width="500" />
 
 
 For prefabs I followed the same concept, however, I made exceptions.
@@ -95,7 +95,7 @@ Decoupling
   
 ### Unity-Friendly MVCS References
 
-<img src="https://github.com/SamuelAsherRivello/UMVCS/master/UMCVS/Assets/Documentation/Images/Inspector_MainController.png?raw=true" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainController.png?raw=true" width="500" />
 
 The serialized references allow for high-level references in a Unity-friendly way. Of course these references do represent 'coupling' but each major class type has a specific responsibility and these major concerns are indeed separate the logic. (See screenshot above)
 
@@ -103,7 +103,7 @@ There is a nice concept where in the C# you can specify 'null' for the Model, Vi
 
 ### C# Structure
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/Editor_MainController.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Editor_MainController.png" width="500" />
 
 
  (See screenshot above)
@@ -124,13 +124,13 @@ A project can have as many models as needed. Typically one for each major domain
 
 Your BaseModel sublass is meant for reading at **Runtime**.
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/Inspector_MainModel.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainModel.png" width="500" />
 
 One of the pros of MonoBehaviour is the serialization in the inspector for the data. This is very helpful for debugging and seeing the current state of the app while its running. (See screenshot above)
 
 ### C# BaseConfigData (ScriptableObject) 
 
-<img src="https://raw.githubusercontent.com/srivello/UMVCS/master/UMCVS/Assets/Documentation/Images/Inspector_MainConfigData.png" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainConfigData.png" width="500" />
 
 There are many benefits for using ScriptableObjects for data storage. It is written to disk and easily editable at both editor time and run time. (See screenshot above)
 
@@ -147,7 +147,7 @@ Coverage Strategy
 * Add a failing test for reported bugs. Fix the bug. Leave the passing test.
 
 
-<img src="https://github.com/SamuelAsherRivello/UMVCS/master/UMCVS/Assets/Documentation/Images/TestRunnerWindow.png?raw=true" width="500" />
+<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/TestRunnerWindow.png?raw=true" width="500" />
 
 Created By
 =============
