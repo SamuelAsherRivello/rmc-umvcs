@@ -25,7 +25,8 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 		public void StateCount_IsZero_BeforeInitializeStateMachine()
 		{
 			// Arrange
-			BouncyBallModel bouncyBallModel = new BouncyBallModel();
+			parentGameObject = new GameObject("ParentGameObject");
+			BouncyBallModel bouncyBallModel = parentGameObject.AddComponent<BouncyBallModel>();
 
 			// Act
 			int stateCount = bouncyBallModel.StateMachine.States.Count;
@@ -41,8 +42,8 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 			// Arrange
 			parentGameObject = new GameObject("ParentGameObject");
 			BouncyBallController bouncyBallController = parentGameObject.AddComponent<BouncyBallController>();
-			BouncyBallModel bouncyBallModel = new BouncyBallModel();
-			
+			BouncyBallModel bouncyBallModel = parentGameObject.AddComponent<BouncyBallModel>();
+
 			// Act
 			bouncyBallModel.InitializeStateMachine(bouncyBallController);
 			int stateCount = bouncyBallModel.StateMachine.States.Count;
