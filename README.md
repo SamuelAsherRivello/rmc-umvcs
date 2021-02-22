@@ -14,7 +14,7 @@ Enjoy!
 
 **Details**
 
-* <a href="https://www.unity3d.com/" target="_blank">Unity 2019.1</a>
+* <a href="https://www.unity3d.com/" target="_blank">Unity 2020.2</a>
 
 **Features**
 
