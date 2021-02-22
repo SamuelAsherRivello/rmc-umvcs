@@ -1,11 +1,8 @@
 ﻿using RMC.Architectures.UMVCS.Model;
-using RMC.Attributes;
 using RMC.Data.Types;
 using RMC.Projects.MyBouncyBallExample.Data.Types;
 using RMC.Projects.MyBouncyBallExample.UMVCS.Controller;
-using RMC.Projects.MyBouncyBallExample.UMVCS.View;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 {

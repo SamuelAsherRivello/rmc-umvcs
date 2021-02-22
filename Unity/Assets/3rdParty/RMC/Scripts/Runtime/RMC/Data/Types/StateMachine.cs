@@ -64,7 +64,7 @@ namespace RMC.Data.Types
 
 
 		private IState _currentState;
-		private List<IState> _states;
+		private List<IState> _states = new List<IState>();
 
 		public StateMachine()
 		{
