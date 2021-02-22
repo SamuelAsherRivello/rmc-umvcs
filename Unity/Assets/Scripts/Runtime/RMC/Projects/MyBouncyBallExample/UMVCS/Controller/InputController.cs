@@ -16,7 +16,7 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Controller
 	{
 		protected void Update()
 		{
-			if (Input.GetKey (KeyCode.Space))
+			if (Input.GetKeyDown (KeyCode.Space))
 			{
 				Context.CommandManager.InvokeCommand(new RestartApplicationCommand());
 			}
