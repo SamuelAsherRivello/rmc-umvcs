@@ -42,9 +42,9 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Controller
 
 			_mainModel.BouncyBallView = Instantiate(_mainView.BouncyBallViewPrefab) as BouncyBallView;
 			_mainModel.BouncyBallView.transform.SetParent(_mainView.BouncyBallParent);
-			_mainModel.BouncyBallView.transform.position =
-				_mainModel.MainConfigData.InitialBouncyBallPosition;
+			_mainModel.BouncyBallView.ResetBouncyBall(_mainModel.MainConfigData.InitialBouncyBallPosition, false, 0);
 
+			//
 			_mainModel.BounceCount.Value = 0;
 
 			_mainService.OnLoadCompleted.AddListener(MainService_OnLoadCompleted);
@@ -69,29 +69,38 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Controller
 				new CaptionTextChangedCommand(observable.PreviousValue, observable.Value));
 		}
 
-		private void MainModel_OnBounceCountChanged(Observable obs)
-		{
-			ObservableInt observable = obs as ObservableInt;
-			int bounceCountMax = _mainModel.MainConfigData.BounceCountMax;
-
-			// Reset the count here, this is a contrived example
-			// of a Controller mitigating changes to a Model
-			if (observable.Value > bounceCountMax)
-			{
-				Debug.Log($"bounceCountMax of {bounceCountMax} reached. Reset count.");
-				_mainModel.BounceCount.Value = 0;
-				return;
-			}
-
-			Context.CommandManager.InvokeCommand(
-				new BounceCountChangedCommand(observable.PreviousValue, observable.Value));
-		}
-
 		private void CommandManager_OnBounced(BouncedCommand e)
 		{
 			_mainModel.BounceCount.Value = _mainModel.BounceCount.Value + 1;
 
-			Context.CommandManager.InvokeCommand(new PlayAudioClipCommand(MyBouncyBallExampleConstants.AudioIndexBounce));
+		}
+
+		private void MainModel_OnBounceCountChanged(Observable obs)
+		{
+			// 1 Controller: Responsible to observe the (somewhat "local") event
+
+			ObservableInt observable = obs as ObservableInt;
+			int bounceCountMax = _mainModel.MainConfigData.BounceCountMax;
+
+			// 2 Controller: Responsible handle the consequence
+			//		Reset the count here, this is a contrived example
+			//		of a Controller mitigating changes to a Model
+			if (observable.Value > bounceCountMax)
+			{
+				Debug.Log($"BounceCountMax of {bounceCountMax} reached. Reset count.");
+				_mainModel.BounceCount.Value = 0;
+				_mainModel.BouncyBallView.ResetBouncyBall(_mainModel.MainConfigData.InitialBouncyBallPosition, true, 1);
+				return;
+			}
+
+			// 3 Controller: Responsible to play sounds
+			Context.CommandManager.InvokeCommand(
+				new PlayAudioClipCommand(MyBouncyBallExampleConstants.AudioIndexBounce));
+	
+
+			// 4 Controller: Responsible dispatch the (somewhat "global") command
+			Context.CommandManager.InvokeCommand(
+				new BounceCountChangedCommand(observable.PreviousValue, observable.Value));
 		}
 	}
 }

@@ -9,7 +9,9 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Controller.Commands
 	public class BounceCountChangedCommand : PropertyChangedCommand<int>
 	{
 		public BounceCountChangedCommand(int previousValue, int currentValue) : 
-			base(previousValue, currentValue) { }
+			base(previousValue, currentValue) 
+		{
+		}
 	}
 }
 
