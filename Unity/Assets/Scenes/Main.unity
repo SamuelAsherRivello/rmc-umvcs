@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 84a42c1f15495b94f83e32d8082ed2aa, type: 3}
+  - {fileID: 8300000, guid: 21196d153464681449ec3e57f396d599, type: 3}
   - {fileID: 8300000, guid: 5bfa92dc839f6344b9660e6d88bb43a7, type: 3}
   - {fileID: 8300000, guid: 8477f46b663a83b4eaf92a791396d56c, type: 3}
   _audioSources:
@@ -2079,6 +2079,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

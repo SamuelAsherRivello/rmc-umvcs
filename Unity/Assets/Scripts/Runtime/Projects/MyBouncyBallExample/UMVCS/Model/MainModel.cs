@@ -1,5 +1,4 @@
-﻿using System;
-using RMC.Architectures.UMVCS.Model;
+﻿using RMC.Architectures.UMVCS.Model;
 using RMC.Attributes;
 using RMC.Data.Types;
 using RMC.Projects.MyBouncyBallExample.UMVCS.View;

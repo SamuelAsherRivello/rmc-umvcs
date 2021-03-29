@@ -1,5 +1,4 @@
-﻿using RMC.Managers;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RMC.Architectures.UMVCS
 {

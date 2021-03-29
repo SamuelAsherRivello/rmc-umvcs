@@ -1,8 +1,6 @@
-﻿
-using RMC.Data.Types;
+﻿using RMC.Data.Types;
 using RMC.Projects.MyBouncyBallExample.UMVCS.Controller;
 using System;
-using UnityEngine;
 
 namespace RMC.Projects.MyBouncyBallExample.Data.Types
 {

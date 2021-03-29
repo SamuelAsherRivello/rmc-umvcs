@@ -1,5 +1,4 @@
-﻿
-using RMC.Commands;
+﻿using RMC.Commands;
 
 namespace RMC.Projects.MyBouncyBallExample.UMVCS.Controller.Commands
 {

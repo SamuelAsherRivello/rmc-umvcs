@@ -1,8 +1,6 @@
-﻿
-using RMC.Data.Types;
+﻿using RMC.Data.Types;
 using RMC.Projects.MyBouncyBallExample.UMVCS.Controller;
 using System;
-using UnityEngine;
 
 namespace RMC.Projects.MyBouncyBallExample.Data.Types
 {
@@ -24,7 +22,8 @@ namespace RMC.Projects.MyBouncyBallExample.Data.Types
 
 		public override void EnterState()
 		{
-			_bouncyBallController.PlayAudioClip(MyBouncyBallExampleConstants.AudioIndexRising);
+			//Sound Commented Out - Too noisy for now
+			//_bouncyBallController.PlayAudioClip(MyBouncyBallExampleConstants.AudioIndexRising);
 		}
 
 		public override void ExitState()

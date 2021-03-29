@@ -1,5 +1,4 @@
-﻿
-using RMC.Architectures.UMVCS.View;
+﻿using RMC.Architectures.UMVCS.View;
 using UnityEngine;
 
 namespace RMC.Projects.MyBouncyBallExample.UMVCS.View

@@ -1,6 +1,4 @@
 ﻿using NUnit.Framework;
-using RMC.Data.Types;
-using UnityEngine;
 
 namespace RMC.Data.Types
 {
