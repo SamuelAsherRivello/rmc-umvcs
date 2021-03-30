@@ -1,23 +1,23 @@
-﻿using NUnit.Framework;
-using RMC.Projects.MyBouncyBallExample.UMVCS.Controller;
+﻿using RMC.Projects.MyBouncyBallExample.UMVCS.Controller;
 using UnityEngine;
+using NUnit.Framework;
 
 namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 {
-
+	[Category("RMC.Projects.MyBouncyBallExample")]
 	/// <summary>
 	/// Test the public API of the <see cref="BouncyBallModelTest"/>.
 	/// </summary>
 	public class BouncyBallModelTest
 	{
-		private GameObject parentGameObject = null;
+		private GameObject _parentGameObject = null;
 
 		[TearDown]
 		public void OnTearDown()
 		{
-			if (parentGameObject != null)
+			if (_parentGameObject != null)
 			{
-				GameObject.DestroyImmediate(parentGameObject, false);
+				GameObject.DestroyImmediate(_parentGameObject, false);
 			}
 		}
 
@@ -25,8 +25,8 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 		public void StateCount_IsZero_BeforeInitializeStateMachine()
 		{
 			// Arrange
-			parentGameObject = new GameObject("ParentGameObject");
-			BouncyBallModel bouncyBallModel = parentGameObject.AddComponent<BouncyBallModel>();
+			_parentGameObject = new GameObject("ParentGameObject");
+			BouncyBallModel bouncyBallModel = _parentGameObject.AddComponent<BouncyBallModel>();
 
 			// Act
 			int stateCount = bouncyBallModel.StateMachine.States.Count;
@@ -40,9 +40,9 @@ namespace RMC.Projects.MyBouncyBallExample.UMVCS.Model
 		public void StateCount_Is2_AfterInitializeStateMachine()
 		{
 			// Arrange
-			parentGameObject = new GameObject("ParentGameObject");
-			BouncyBallController bouncyBallController = parentGameObject.AddComponent<BouncyBallController>();
-			BouncyBallModel bouncyBallModel = parentGameObject.AddComponent<BouncyBallModel>();
+			_parentGameObject = new GameObject("ParentGameObject");
+			BouncyBallController bouncyBallController = _parentGameObject.AddComponent<BouncyBallController>();
+			BouncyBallModel bouncyBallModel = _parentGameObject.AddComponent<BouncyBallModel>();
 
 			// Act
 			bouncyBallModel.InitializeStateMachine(bouncyBallController);

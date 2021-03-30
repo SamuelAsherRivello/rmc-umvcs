@@ -2,6 +2,7 @@
 
 namespace RMC.Data.Types
 {
+	[Category("RMC.Data")]
 	public class ObservableTest
 	{
 		[Test]

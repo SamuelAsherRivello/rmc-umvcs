@@ -11,6 +11,6 @@
 		public static int AudioIndexBounce = 0;
 		public static int AudioIndexRising = 1;
 		public static int AudioIndexFalling = 2;
-		
+		 
 	}
 }

@@ -1,9 +1,10 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace RMC.Data.Types
 {
+	
 	public class TestState01 : BaseState
 	{
 		public bool HasCalledDestoyState = false;
@@ -28,6 +29,7 @@ namespace RMC.Data.Types
 		public override Type UpdateState() { return null; }
 	}
 
+	[Category("RMC.Data")]
 	public class StateMachineTest
 	{
 		[Test]

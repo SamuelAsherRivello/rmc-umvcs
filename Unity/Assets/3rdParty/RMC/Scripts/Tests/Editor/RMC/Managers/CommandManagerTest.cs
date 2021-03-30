@@ -4,6 +4,7 @@ namespace RMC.Managers
 	public class TestCommand : Commands.Command { }
 	public class OtherTestCommand : Commands.Command { }
 
+	[Category("RMC.Managers")]
 	public class CommandManagerTest
 	{
 		[Test]

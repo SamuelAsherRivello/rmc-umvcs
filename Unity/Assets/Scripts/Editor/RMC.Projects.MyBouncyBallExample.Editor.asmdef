@@ -1,0 +1,16 @@
+{
+    "name": "RMC.Projects.MyBouncyBallExample.Editor",
+    "rootNamespace": "RMC.Projects.MyBouncyBallExample",
+    "references": [
+        "GUID:72878927ed773a04495867139937d0cd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
