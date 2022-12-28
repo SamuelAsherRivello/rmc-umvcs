@@ -1,9 +1,9 @@
 {
-  "name": "com.rmc.rmc-mini-mvcs",
-  "displayName": "RMC Mini MVCS",
-  "version": "0.1.3",
+  "name": "com.rmc.rmc-umvcs",
+  "displayName": "RMC UMVCS",
+  "version": "0.1.4",
   "unity": "2022.3",
-  "description": "Mini MVCS library for Unity Development by Rivello Multimedia Consulting",
+  "description": "UMVCS (Unity Model View Controller Service) library for Unity Development by Rivello Multimedia Consulting",
   "keywords": [
     "unity",
 	"unity3d",
@@ -14,13 +14,13 @@
     "architecture",
     "utility"
   ],
-  "homepage": "https://github.com/rmc/rmc-mini-mvcs.git",
+  "homepage": "https://github.com/rmc/rmc-umvcs.git",
   "bugs": {
-    "url": "https://github.com/rmc/rmc-mini-mvcs/issues"
+    "url": "https://github.com/rmc/rmc-umvcs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rmc/rmc-mini-mvcs.git"
+    "url": "git+ssh://git@github.com/rmc/rmc-umvcs.git"
   },
   "license": "MIT",
   "author": "RMC (github.com/SamuelAsherRivello)",
@@ -29,9 +29,9 @@
   },
   "samples": [
     {
-      "displayName": "RMC Mini MVCS Sample",
-      "description": "Demonstrates the RMC Mini MVCS",
-      "path": "Samples~/RMC Mini MVCS Sample"
+      "displayName": "RMC UMVCS Sample",
+      "description": "Demonstrates the RMC UMVCS",
+      "path": "Samples~/RMC UMVCS Sample"
     }
   ]
 }

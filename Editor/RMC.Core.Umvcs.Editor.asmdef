@@ -1,0 +1,16 @@
+{
+    "name": "RMC.Core.Umvcs.Editor",
+    "rootNamespace": "RMC",
+    "references": [
+        "GUID:16bbb4a6f93b6c24498af879019423ae"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
