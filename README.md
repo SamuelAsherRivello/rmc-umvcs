@@ -1,36 +1,46 @@
-[![npm package](https://img.shields.io/npm/v/com.rmc.rmc-mini-mvcs)](https://www.npmjs.com/package/com.rmc.rmc-mini-mvcs)
-[![openupm](https://img.shields.io/npm/v/com.rmc.rmc-mini-mvcs?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.rmc.rmc-mini-mvcs/)
-![Tests](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/workflows/Tests/badge.svg)
+[![npm package](https://img.shields.io/npm/v/com.rmc.rmc-umvcs)](https://www.npmjs.com/package/com.rmc.umvcs)
+[![openupm](https://img.shields.io/npm/v/com.rmc.rmc-umvcs?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.rmc.rmc-umvcs/)
+![Tests](https://github.com/SamuelAsherRivello/rmc-umvcs/workflows/Tests/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-# Mini MVCS 
+# RMC
 
-The Mini MVCS library for Unity is a custom framework embracing the [MVCS architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
+
+
+| --              | Requires MonoBehaviour?  | Lightweight?       | More Info    | Created    | Updated    |
+|-----------------|--------------------------|--------------------|--------------|------------|------------|
+| uMVCS           | ✔️                      | ✔️ (Light)         | See Below    | 2018       | 2023       |
+| Mini MVCS       | ❌                       | ✔️ (Even Lighter!)  | [rmc-mini-mvcs](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/)    | 2023   | 2023   |
+
+# UMVCS 
+
+The UMVCS library for Unity is a custom framework embracing the [MVCS architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 
 MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you.
 
-## Mini MVCS Is Light
+## UMVCS MVCS Is Light
 
-The Mini MVCS library is a **non-MonoBehaviour** solution for MVCS architecture within Unity. It has no dependencies on Unity libraries nor 3rd party libraries.
+The UMVCS MVCS library a solution for MVCS architecture within Unity. It is **heavily-dependant** on **MonoBehaviour** as a It has no dependencies on 3rd party libraries.
 
-## Mini Is Free
+## UMVCS Is Free
 
-The Mini MVCS library for Unity Development is free. Created by Rivello Multimedia Consulting.
+The UMVCS MVCS library for Unity Development is free. Created by Rivello Multimedia Consulting.
 
-## Mini Is Simple & Proven
+## UMVCS Is Simple & Proven
 
 <img width="200" src="./Documentation~/simplicity-chart.jpg"/>
 
 
-## Mini is Flexible
+## UMVCS is Flexible
 
 It has few classes and a flexible pattern. Following the conventions of MVCS requires discipline as the system is purposefully light and flexible. For example the a model instance **can** access another model instance, but it is recommended not to do so.
 
-## Mini Best Practices
+## UMVCS Best Practices
 
 ### Communication
 
-Mini is flexible and does not prevent actor-actor communication. However, best practices are to limit communication.
+UMVCS is flexible and does not prevent actor-actor communication. However, best practices are to limit communication.
 
 **Communication Channels**
 
@@ -52,7 +62,7 @@ Mini is flexible and does not prevent actor-actor communication. However, best p
 <img width="700" src="./Documentation~/mvcs_diagram.png"/>
 
 
-## Mini Appropriateness
+## UMVCS Appropriateness
 
 MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you.
 
@@ -77,52 +87,13 @@ However, that is likely a subsection of a game. The rest of the game may still b
 
 # Table Of Contents
 
-- [How to use](#how-to-use)
 - [Install](#install)
-  - [via npm](#via-npm)
-  - [via OpenUPM](#via-openupm)
   - [via Git URL](#via-git-url)
   - [Tests](#tests)
-- [Configuration](#configuration)
 
 <!-- toc -->
 
-## How to use
-
-*Work In Progress* 
-
-**Use only the "via Git URL" below**
-
 ## Install
-
-### via npm
-
-Open `Packages/manifest.json` with your favorite text editor. Add a [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html) and following line to dependencies block:
-```json
-{
-  "scopedRegistries": [
-    {
-      "name": "npmjs",
-      "url": "https://registry.npmjs.org/",
-      "scopes": [
-        "com.rmc.mini-mvcs"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.rmc.rmc-mini-mvcs": "1.0.0"
-  }
-}
-```
-Package should now appear in package manager.
-
-### via OpenUPM
-
-The package is also available on the [openupm registry](https://openupm.com/packages/com.rmc.rmc-mini-mvcs). You can install it eg. via [openupm-cli](https://github.com/openupm/openupm-cli).
-
-```
-openupm add com.rmc.rmc-mini-mvcs
-```
 
 ### via Git URL
 
@@ -130,7 +101,7 @@ Open `Packages/manifest.json` with your favorite text editor. Add following line
 ```json
 {
   "dependencies": {
-    "com.rmc.rmc-mini-mvcs": "https://github.com/SamuelAsherRivello/rmc-mini-mvcs.git"
+    "com.rmc.rmc-umvcs": "https://github.com/SamuelAsherRivello/rmc-umvcs.git"
   }
 }
 ```
@@ -145,20 +116,9 @@ Open `Packages/manifest.json` with your favorite text editor. Add following line
 {
   "dependencies": {
   },
-  "testables": [ "com.rmc.rmc-mini-mvcs" ]
+  "testables": [ "com.rmc.rmc-umvcs" ]
 }
 ```
-
-## Configuration
-
-*Work In Progress*
-
-## License
-
-MIT License
-
-Copyright © 2022 rmc
-
 
 Created By
 =============
