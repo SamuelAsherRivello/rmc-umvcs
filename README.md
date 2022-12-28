@@ -1,160 +1,171 @@
-# UMVCS
-Unity MVCS (Model-View-Controller-Service) Architecture
+[![npm package](https://img.shields.io/npm/v/com.rmc.rmc-mini-mvcs)](https://www.npmjs.com/package/com.rmc.rmc-mini-mvcs)
+[![openupm](https://img.shields.io/npm/v/com.rmc.rmc-mini-mvcs?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.rmc.rmc-mini-mvcs/)
+![Tests](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/workflows/Tests/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-I created this from scratch for fun, for learning, and for teaching.
+# Mini MVCS 
 
-It is Unity-centric. Its designed for the unique aspects of game development in the Unity platform (Scenes, Prefabs, Serialization, GameObjects, MonoBehaviours, etc...)
+The Mini MVCS library for Unity is a custom framework embracing the [MVCS architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 
-It is MonoBehaviour-centric. There are pros and cons to this approach.
+MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you.
 
-Enjoy!
+## Mini MVCS Is Light
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/GameView.png" width="500" />
+The Mini MVCS library is a **non-MonoBehaviour** solution for MVCS architecture within Unity. It has no dependencies on Unity libraries nor 3rd party libraries.
 
+## Mini Is Free
 
-**Details**
+The Mini MVCS library for Unity Development is free. Created by Rivello Multimedia Consulting.
 
-* <a href="https://www.unity3d.com/" target="_blank">Unity 2020.2</a>
+## Mini Is Simple & Proven
 
-**Features**
-
-* A light-weight custom <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">MVCS Architecture</a> - for high-level organization
-* A custom <a href="https://en.wikipedia.org/wiki/Finite-state_machine" target="_blank">StateMachine</a> - For managing runtime complexity
-* A custom <a href="http://www.samuelasherrivello.com/unity-project-structure/" target="_blank">Project Organization</a> - for assets best practices
-* A custom CommandManager - For decoupled, global communication
-* Project Organization - A prescriptive solution for structuring your work
-* Code Template - A prescriptive solution for best practices
-
-MVCS
-=============
-
-The high-level architecture is taken from the industry-standard MVCS. 
-
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/MVCS_Diagram.png" width="500" />
-
-Project Organization
-=============
-  
-I used my own <a href="http://www.samuelasherrivello.com/unity-project-structure/" target="_blank">Project Organization</a> for project structure.
-
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/ProjectWindow.png" width="500" />
+<img width="200" src="./Documentation~/simplicity-chart.jpg"/>
 
 
-Scene Hierarchy Organization
-=============
-  
-The hierarchy structure mimics the MVCS code structure. The hierarchy structure is optional.
+## Mini is Flexible
+
+It has few classes and a flexible pattern. Following the conventions of MVCS requires discipline as the system is purposefully light and flexible. For example the a model instance **can** access another model instance, but it is recommended not to do so.
+
+## Mini Best Practices
+
+### Communication
+
+Mini is flexible and does not prevent actor-actor communication. However, best practices are to limit communication.
+
+**Communication Channels**
+
+* Methods - The caller scope has a reference to the called scope and "calls a method" in the typical sense. This is the most coupled communication channel
+* Events - [Observer pattern](https://www.dofactory.com/net/observer-design-pattern) where the reciever **has** a reference to the sender
+* Commands - [Observer pattern](https://www.dofactory.com/net/observer-design-pattern) where the reciever **has no** reference to the sender. This is the least coupled communication channel
+
+**Communication Suggestions**
+
+| --              | To Model     | To View                 | To Controller | To Service     |
+|-----------------|--------------|-------------------------|---------------|----------------|
+| From Model      | ❌           | ❌                     | ✔️(Events)    | ❌           |
+| From View       | ❌           | ❌                     | ✔️(Events)    | ❌           |
+| From Controller | ✔️(Methods)  | ✔️(Methods/Commands)  | ✔️(Commands)  | ✔️(Methods)  |
+| From Service    | ❌           | ❌                    | ✔️(Events)    | ❌           |
+
+**Communication Diagram**
+
+<img width="700" src="./Documentation~/mvcs_diagram.png"/>
 
 
+## Mini Appropriateness
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/HierarchyWindow.png" width="500" />
-
-Approach #1 - I used this. (See screenshot above)
-* App
-  * Model
-  * View
-  * Controller
-  * Service
-
-Approach #2 - Here is an alternative approach
-* App
-  * Main
-    * Model
-    * View
-    * Controller
-    * Service
-  * Audio
-    * Model
-    * View
-    * Controller
-    * Service
-
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/BouncyBallView.png" width="500" />
+MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you.
 
 
-For prefabs I followed the same concept, however, I made exceptions.
+| MVCS Pros                         | MVCS Cons     |
+|-----------------------------------|---------------|
+| Code is highly maintainable       | Code is highly repetitive                                   | 
+| Code is highly extensible         | Project navigation requires more time                       | 
+| Faster to update an existing project    | Slower To start a new project                         | 
+| Adding a new feature is prescriptive          | Adding a new feature may require more classes     | 
+| Faster learning curve to onboard veterans     | Slower learning curve to onboard newbies          | 
+| Suggested for projects of medium/large scope  | Not Suggested for projects of small scope         | 
+| Model is highly testable (TDD)                |                                                  | 
+| Coding invites less debate                   | Coding requires more discipline                  | 
 
-Approach #1 - I wanted to use this, but there are challenges
+**Appropriateness For Games**
 
-* Prefab
-  * Model
-  * View
-  * Controller
-  * (Service)
+For projects where runtime optimization is essential, coding directly (without MVCS), may yield better performance.
 
-Approach #2 - I used this (See screenshot above)
-
-* Prefab/View
-  * Model
-  * Controller
-  * (Service)
-
-
-Decoupling
-=============
-  
-### Unity-Friendly MVCS References
-
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainController.png?raw=true" width="500" />
-
-The serialized references allow for high-level references in a Unity-friendly way. Of course these references do represent 'coupling' but each major class type has a specific responsibility and these major concerns are indeed separate the logic. (See screenshot above)
-
-There is a nice concept where in the C# you can specify 'null' for the Model, View, Controller, Service and it will not appear in the inspector.
-
-### C# Structure
-
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Editor_MainController.png" width="500" />
+However, that is likely a subsection of a game. The rest of the game may still benefit from MVCS. There is indeed flexibility for such a hybrid solution.
 
 
- (See screenshot above)
+# Table Of Contents
 
- 1. I structured the high level classes using generics
- 1. The boilerplate superclass stucture does allow some (optional) recasting in the subclasses. 
- 1. The CommandManager works like an "EventBus" or "EventDispatcher". To prevent naming confusion with the "UnityEvents" I use, I call this tier of communication "Commands".
- 1. For View->Controller communication "UnityEvents" are used.
+- [How to use](#how-to-use)
+- [Install](#install)
+  - [via npm](#via-npm)
+  - [via OpenUPM](#via-openupm)
+  - [via Git URL](#via-git-url)
+  - [Tests](#tests)
+- [Configuration](#configuration)
 
-Model Serialization
-=============
+<!-- toc -->
 
-I chose for BaseModel to extend MonoBehaviour. There are pros and cons for this.
+## How to use
 
-### C# BaseModel (MonoBehaviour) 
+*Work In Progress* 
 
-A project can have as many models as needed. Typically one for each major domain (Player, Enemy, World, Physics, Audio, etc...)
+**Use only the "via Git URL" below**
 
-Your BaseModel sublass is meant for reading at **Runtime**.
+## Install
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainModel.png" width="500" />
+### via npm
 
-One of the pros of MonoBehaviour is the serialization in the inspector for the data. This is very helpful for debugging and seeing the current state of the app while its running. (See screenshot above)
+Open `Packages/manifest.json` with your favorite text editor. Add a [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html) and following line to dependencies block:
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "npmjs",
+      "url": "https://registry.npmjs.org/",
+      "scopes": [
+        "com.rmc.mini-mvcs"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.rmc.rmc-mini-mvcs": "1.0.0"
+  }
+}
+```
+Package should now appear in package manager.
 
-### C# BaseConfigData (ScriptableObject) 
+### via OpenUPM
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/Inspector_MainConfigData.png" width="500" />
+The package is also available on the [openupm registry](https://openupm.com/packages/com.rmc.rmc-mini-mvcs). You can install it eg. via [openupm-cli](https://github.com/openupm/openupm-cli).
 
-There are many benefits for using ScriptableObjects for data storage. It is written to disk and easily editable at both editor time and run time. (See screenshot above)
+```
+openupm add com.rmc.rmc-mini-mvcs
+```
 
-Your BaseConfigData subclass is meant for writing at  **Edit Time** and reading at runtime.
+### via Git URL
 
-Unit Tests
-=============
-  
-I included Unit Tests (with limited coverage). In some cases I used TDD to develop sections and in other I added tests for academic (teaching) reasons. Generally, I recommend using Unit Tests for game projects and providing a coverage strategy
+Open `Packages/manifest.json` with your favorite text editor. Add following line to the dependencies block:
+```json
+{
+  "dependencies": {
+    "com.rmc.rmc-mini-mvcs": "https://github.com/SamuelAsherRivello/rmc-mini-mvcs.git"
+  }
+}
+```
 
-Coverage Strategy
-* Use TDD (per developer preference)
-* Increase coverage on higher-risk and/or highly-testable areas
-* Add a failing test for reported bugs. Fix the bug. Leave the passing test.
+### Tests
 
+The package can optionally be set as *testable*.
+In practice this means that tests in the package will be visible in the [Unity Test Runner](https://docs.unity3d.com/2017.4/Documentation/Manual/testing-editortestsrunner.html).
 
-<img src="https://raw.githubusercontent.com/SamuelAsherRivello/UMVCS/master/Unity/Assets/Documentation/Images/TestRunnerWindow.png?raw=true" width="500" />
+Open `Packages/manifest.json` with your favorite text editor. Add following line **after** the dependencies block:
+```json
+{
+  "dependencies": {
+  },
+  "testables": [ "com.rmc.rmc-mini-mvcs" ]
+}
+```
+
+## Configuration
+
+*Work In Progress*
+
+## License
+
+MIT License
+
+Copyright © 2022 rmc
+
 
 Created By
 =============
 
 - Samuel Asher Rivello 
-- Over 20 years XP with game development (2020)
-- Over 8 years XP with Unity (2020)
+- Over 23 years XP with game development (2023)
+- Over 10 years XP with Unity (2023)
 
 Contact
 =============
@@ -163,4 +174,7 @@ Contact
 - Resume & Portfolio - <a href="http://www.SamuelAsherRivello.com">SamuelAsherRivello.com</a>
 - Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - LinkedIn - <a href="https://Linkedin.com/in/SamuelAsherRivello">Linkedin.com/in/SamuelAsherRivello</a> <--- Say Hello! :)
+
+
+
 
