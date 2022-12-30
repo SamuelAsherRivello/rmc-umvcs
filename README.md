@@ -120,6 +120,13 @@ Open `Packages/manifest.json` with your favorite text editor. Add following line
 }
 ```
 
+### Import Samples
+To see clear use cases, import and run the samples:
+
+1. Open Unity and then open `Window > Package Manager`
+1. Select `RMC UMVCS` 
+1. Select Samples and import
+
 Created By
 =============
 
