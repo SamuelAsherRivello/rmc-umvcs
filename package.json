@@ -1,8 +1,8 @@
 {
   "name": "com.rmc.rmc-umvcs",
   "displayName": "RMC UMVCS",
-  "version": "0.1.4",
-  "unity": "2022.3",
+  "version": "1.0.0",
+  "unity": "2021.3",
   "description": "UMVCS (Unity Model View Controller Service) library for Unity Development by Rivello Multimedia Consulting",
   "keywords": [
     "unity",
