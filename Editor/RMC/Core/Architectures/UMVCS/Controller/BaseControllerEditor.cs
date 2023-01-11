@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using RMC.Core.Architectures.Umvcs.Controller;
 using RMC.Core.Architectures.Umvcs.Model;
 using RMC.Core.Architectures.Umvcs.Service;
 using RMC.Core.Architectures.Umvcs.View;
