@@ -13,7 +13,7 @@ namespace RMC.Core.Architectures.Umvcs.Controller
 	/// TODO: Add comment
 	/// </summary>
 	[CustomEditor (typeof (BaseController), true)]
-	public class BaseControllerEditor : UnityEditor.Editor
+	public class BaseControllerEditor : Editor
 	{
 		public override void OnInspectorGUI()
 		{
