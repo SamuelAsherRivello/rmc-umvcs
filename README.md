@@ -21,7 +21,7 @@ MVCS is one of many solutions for organizing a Unity projec efficiently. It may 
 
 ## UMVCS MVCS Is Light
 
-The UMVCS MVCS library a solution for MVCS architecture within Unity. It is **heavily-dependant** on **MonoBehaviour** as a It has no dependencies on 3rd party libraries.
+The UMVCS library a solution for MVCS architecture within Unity. It is **heavily-dependent** on **MonoBehaviour** as a It has no dependencies on 3rd party libraries.
 
 ## UMVCS Is Free
 
