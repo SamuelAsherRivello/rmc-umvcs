@@ -1,8 +1,3 @@
-[![npm package](https://img.shields.io/npm/v/com.rmc.rmc-umvcs)](https://www.npmjs.com/package/com.rmc.umvcs)
-[![openupm](https://img.shields.io/npm/v/com.rmc.rmc-umvcs?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.rmc.rmc-umvcs/)
-![Tests](https://github.com/SamuelAsherRivello/rmc-umvcs/workflows/Tests/badge.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
 # RMC
 
 Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
