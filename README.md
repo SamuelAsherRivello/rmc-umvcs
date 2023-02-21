@@ -1,3 +1,6 @@
+[![npm package](https://img.shields.io/npm/v/com.rmc.rmc-umvcs)](https://www.npmjs.com/package/com.rmc.rmc-umvcs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 # RMC
 
 Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
