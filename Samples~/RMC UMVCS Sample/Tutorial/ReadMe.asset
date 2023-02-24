@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cf3b74950b299408cc642cd2423789, type: 3}
+  m_Name: ReadMe
+  m_EditorClassIdentifier: 
+  Title: ReadMe
+  Icon: {fileID: 2800000, guid: f6ea3de671604c543bd08afa730aa91c, type: 3}
+  Sections:
+  - TextHeading: Welcome
+    TextSubheading: Package - RMC UMVCS
+    TextBody: The repo of UMVCS is a custom framework embracing the MVCS architecture.
+    LinkName: Github.com/SamuelAsherRivello/rmc-umvcs
+    LinkUrl: https://github.com/SamuelAsherRivello/rmc-umvcs
+    PingObjectName: 
+    PingObjectGuid: 
+    MenuItemName: 
+    MenuItemPath: 
+  - TextHeading: 
+    TextSubheading: Course - MVC Architecture For Unity
+    TextBody: The online course gives you the training to create and maintain Unity
+      projects which are faster to develop and easier to maintain.
+    LinkName: MVC Architecture For Unity - Udemy Course
+    LinkUrl: https://bit.ly/mvc-architecture-for-unity-on-udemy
+    PingObjectName: 
+    PingObjectGuid: 
+    MenuItemName: 
+    MenuItemPath: 
+  - TextHeading: Getting Started
+    TextSubheading: Learn From Samples
+    TextBody: Start with the MyBouncyBall Sample Project
+    LinkName: 
+    LinkUrl: 
+    PingObjectName: Play "Loader" Scene
+    PingObjectGuid: 67b9f22f548e79247b41b9d7953203bd
+    MenuItemName: 
+    MenuItemPath: 
+  - TextHeading: 
+    TextSubheading: Read Source Code
+    TextBody: Dig deeper into the framework source code
+    LinkName: 
+    LinkUrl: 
+    PingObjectName: Open "UMVCS" Folder
+    PingObjectGuid: e865d0ad172f6a1459011ba6c941e46c
+    MenuItemName: 
+    MenuItemPath: 
+  HasLoadedLayout: 0
