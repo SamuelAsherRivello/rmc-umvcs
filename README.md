@@ -83,23 +83,74 @@ For projects where runtime optimization is essential, coding directly (without M
 However, that is likely a subsection of a game. The rest of the game may still benefit from MVCS. There is indeed flexibility for such a hybrid solution.
 
 
-# Table Of Contents
+<img width = "400" src="https://raw.githubusercontent.com/SamuelAsherRivello/rmc-core/main/RMC%20Core/Documentation~/com.rmc_namespace_logo.png" />
 
+# RMC UMVCS
+
+- [How To Use](#how-to-use)
 - [Install](#install)
-  - [via Git URL](#via-git-url)
+  - [Via NPM](#via-npm)
+  - [Via Git URL](#via-git-url)
   - [Tests](#tests)
+  - [Samples](#samples)
+- [Configuration](#configuration)
 
 <!-- toc -->
 
+## How to use
+
+The UMVCS library for Unity is a custom framework embracing the [MVCS architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+
+MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you. Enjoy!
+
 ## Install
 
-### via Git URL
+### Via NPM
 
-Open `Packages/manifest.json` with your favorite text editor. Add following line to the dependencies block:
+You can either use the Unity Package Manager Window (UPM) or directly edit the manifest file. The result will be the same.
+
+**UPM**
+
+To use the [Package Manager Window](https://docs.unity3d.com/Manual/upm-ui.html), first add a [Scoped Registry](https://docs.unity3d.com/2023.1/Documentation/Manual/upm-scoped.html), then click on the interface menu ( `Status Bar → (+) Icon → Add Package By Name ...` ).
+
+**Manifest File**
+
+Or to edit the `Packages/manifest.json` directly with your favorite text editor, add a scoped registry then the following line(s) to dependencies block:
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "npmjs",
+      "url": "https://registry.npmjs.org/",
+      "scopes": [
+        "com.rmc"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.com.rmc.rmc-umvcs": "1.5.5"
+  }
+}
+```
+Package should now appear in package manager.
+
+
+### Via Git URL
+
+You can either use the Unity Package Manager (UPM) Window or directly edit the manifest file. The result will be the same.
+
+**UPM**
+
+To use the [Package Manager Window](https://docs.unity3d.com/Manual/upm-ui.html) click on the interface menu ( `Status Bar → (+) Icon → Add Package From Git Url ...` ).
+
+**Manifest File**
+
+Or to edit the `Packages/manifest.json` directly with your favorite text editor, add following line(s) to the dependencies block:
 ```json
 {
   "dependencies": {
-    "com.rmc.rmc-umvcs": "https://github.com/SamuelAsherRivello/rmc-umvcs.git"
+      "com.rmc.rmc-umvcs": "https://github.com/SamuelAsherRivello/rmc-umvcs.git"
   }
 }
 ```
@@ -118,12 +169,24 @@ Open `Packages/manifest.json` with your favorite text editor. Add following line
 }
 ```
 
-### Import Samples
-To see clear use cases, import and run the samples:
+### Samples
 
-1. Open Unity and then open `Window > Package Manager`
-1. Select `RMC UMVCS` 
-1. Select Samples and import
+Some packages include optional samples with clear use cases. To import and run the samples:
+
+1. Open Unity 
+1. Complete the package installation (See above)
+1. Open the [Package Manager Window](https://docs.unity3d.com/Manual/upm-ui.html)
+1. Select this package 
+1. Select samples
+1. Import
+
+## Configuration
+
+* `Unity Target` - [Standalone MAC/PC](https://support.unity.com/hc/en-us/articles/206336795-What-platforms-are-supported-by-Unity-)
+* `Unity Version` - Any [Unity Editor](https://unity.com/download) 2021.x or higher
+* `Unity Rendering` - Any [Unity Render Pipeline](https://docs.unity3d.com/Manual/universal-render-pipeline.html)
+* `Unity Aspect Ratio` - Any [Unity Game View](https://docs.unity3d.com/Manual/GameView.html)
+
 
 Created By
 =============
@@ -137,8 +200,13 @@ Contact
 
 - Twitter - <a href="https://twitter.com/srivello/">@srivello</a>
 - Resume & Portfolio - <a href="http://www.SamuelAsherRivello.com">SamuelAsherRivello.com</a>
-- Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
+- Source Code on Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - LinkedIn - <a href="https://Linkedin.com/in/SamuelAsherRivello">Linkedin.com/in/SamuelAsherRivello</a> <--- Say Hello! :)
+
+License
+=============
+
+Provided as-is under MIT License | Copyright © 2023 Rivello Multimedia Consulting, LLC
 
 
 
