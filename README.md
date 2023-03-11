@@ -129,7 +129,7 @@ Or to edit the `Packages/manifest.json` directly with your favorite text editor,
     }
   ],
   "dependencies": {
-    "com.com.rmc.rmc-umvcs": "1.5.5"
+    "com.rmc.rmc-umvcs": "1.5.6"
   }
 }
 ```
