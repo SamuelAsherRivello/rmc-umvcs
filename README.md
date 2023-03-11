@@ -27,7 +27,7 @@ The UMVCS MVCS library for Unity Development is free. Created by Rivello Multime
 
 ## UMVCS Is Simple & Proven
 
-<img width="200" src="./Documentation~/simplicity-chart.jpg"/>
+<img width="200" src="./RMC UMVCS/Documentation~/simplicity-chart.jpg"/>
 
 
 ## UMVCS is Flexible
@@ -57,7 +57,7 @@ UMVCS is flexible and does not prevent actor-actor communication. However, best 
 
 **Communication Diagram**
 
-<img width="700" src="./Documentation~/mvcs_diagram.png"/>
+<img width="700" src="./RMC UMVCS/Documentation~/mvcs_diagram.png"/>
 
 
 ## UMVCS Appropriateness
