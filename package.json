@@ -17,13 +17,13 @@
   "dependencies": {
     "com.rmc.rmc-readme": "1.2.0"
   },
-  "homepage": "https://github.com/rmc/rmc-umvcs.git",
+  "homepage": "https://github.com/SamuelAsherRivello/rmc-umvcs.git",
   "bugs": {
-    "url": "https://github.com/rmc/rmc-umvcs/issues"
+    "url": "https://github.com/SamuelAsherRivello/rmc-umvcs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rmc/rmc-umvcs.git"
+    "url": "git+ssh://git@github.com/SamuelAsherRivello/rmc-umvcs.git"
   },
   "license": "MIT",
   "author": "RMC (github.com/SamuelAsherRivello)",
