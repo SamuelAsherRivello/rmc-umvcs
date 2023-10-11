@@ -1,13 +1,13 @@
 {
   "name": "com.rmc.rmc-umvcs",
   "displayName": "RMC UMVCS",
-  "version": "1.5.6",
-  "unity": "2021.3",
+  "version": "1.6.1",
+  "unity": "2022.3",
   "description": "UMVCS (Unity Model View Controller Service) library for Unity Development by Rivello Multimedia Consulting",
   "keywords": [
     "unity",
-	"unity3d",
-	"upm",
+	  "unity3d",
+	  "upm",
     "rmc",
     "mvc",
     "mvcs",
@@ -15,7 +15,7 @@
     "utility"
   ],
   "dependencies": {
-    "com.rmc.rmc-readme": "1.2.0"
+    "com.rmc.rmc-readme": "1.2.2"
   },
   "homepage": "https://github.com/SamuelAsherRivello/rmc-umvcs.git",
   "bugs": {
