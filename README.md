@@ -1,7 +1,7 @@
 [![npm package](https://img.shields.io/npm/v/com.rmc.rmc-umvcs)](https://www.npmjs.com/package/com.rmc.rmc-umvcs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-# RMC
+# RMC Architectures
 
 Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
 
@@ -11,7 +11,7 @@ Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
 | uMVCS           | ✔️                      | ✔️ (Light)         | See Below    | 2018       | 2023       |
 | Mini MVCS       | ❌                       | ✔️ (Even Lighter!)  | [rmc-mini-mvcs](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/)    | 2023   | 2023   |
 
-# UMVCS 
+# RMC Umvcs Architecture - For Unity
 
 The UMVCS library for Unity is a custom framework embracing the [MVCS architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 
