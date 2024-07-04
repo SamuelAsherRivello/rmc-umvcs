@@ -1,6 +1,12 @@
 [![npm package](https://img.shields.io/npm/v/com.rmc.rmc-umvcs)](https://www.npmjs.com/package/com.rmc.rmc-umvcs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+<img src="./RMC UMVCS/Documentation~/Images/Banner.png" width="600">
+
+<BR>
+<BR>
+
+
 # RMC Architectures
 
 Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
@@ -9,7 +15,10 @@ Rivello Multimedia Consulting has multiple frameworks for MVC in Unity.
 | --              | Requires MonoBehaviour?  | Lightweight?       | More Info    | Created    | Updated    |
 |-----------------|--------------------------|--------------------|--------------|------------|------------|
 | uMVCS           | ✔️                      | ✔️ (Light)         | See Below    | 2018       | 2023       |
-| Mini MVCS       | ❌                       | ✔️ (Even Lighter!)  | [rmc-mini-mvcs](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/)    | 2023   | 2023   |
+| Mini MVCS       | ❌                       | ✔️ (Even Lighter!)  | [rmc-mini-mvcs](https://github.com/SamuelAsherRivello/rmc-mini-mvcs/)    | 2023   | 2024   |
+
+<BR>
+<BR>
 
 # RMC Umvcs Architecture - For Unity
 
@@ -27,18 +36,24 @@ The UMVCS MVCS library for Unity Development is free. Created by Rivello Multime
 
 ## UMVCS Is Simple & Proven
 
-<img width="200" src="./RMC UMVCS/Documentation~/simplicity-chart.jpg"/>
+<img width="200" src="./RMC UMVCS/Documentation~/Images/simplicity-chart.jpg"/>
 
 
 ## UMVCS is Flexible
 
 It has few classes and a flexible pattern. Following the conventions of MVCS requires discipline as the system is purposefully light and flexible. For example the a model instance **can** access another model instance, but it is recommended not to do so.
 
+
+<BR>
+<BR>
+
+
 ## UMVCS Best Practices
 
 ### Communication
 
 UMVCS is flexible and does not prevent actor-actor communication. However, best practices are to limit communication.
+
 
 **Communication Channels**
 
@@ -55,14 +70,26 @@ UMVCS is flexible and does not prevent actor-actor communication. However, best 
 | From Controller | ✔️(Methods)  | ✔️(Methods/Commands)  | ✔️(Commands)  | ✔️(Methods)  |
 | From Service    | ❌           | ❌                    | ✔️(Events)    | ❌           |
 
+
+<BR>
+<BR>
+
+
 **Communication Diagram**
 
-<img width="700" src="./RMC UMVCS/Documentation~/mvcs_diagram.png"/>
+<div align="center" width="100%">
+<img width="400" src="./RMC UMVCS/Documentation~/Images/mvcs_diagram.png"/>
+</div>
 
 
 ## UMVCS Appropriateness
 
 MVCS is one of many solutions for organizing a Unity projec efficiently. It may or may not be the best solution for you.
+
+
+<BR>
+<BR>
+
 
 
 | MVCS Pros                         | MVCS Cons     |
@@ -76,14 +103,28 @@ MVCS is one of many solutions for organizing a Unity projec efficiently. It may 
 | Model is highly testable (TDD)                |                                                  | 
 | Coding invites less debate                   | Coding requires more discipline                  | 
 
+
+<BR>
+<BR>
+
 **Appropriateness For Games**
 
 For projects where runtime optimization is essential, coding directly (without MVCS), may yield better performance.
 
 However, that is likely a subsection of a game. The rest of the game may still benefit from MVCS. There is indeed flexibility for such a hybrid solution.
 
+<BR>
+<BR>
 
+
+<div align="center" width="100%">
 <img width = "400" src="https://raw.githubusercontent.com/SamuelAsherRivello/rmc-core/main/RMC%20Core/Documentation~/com.rmc_namespace_logo.png" />
+</div>
+
+
+<BR>
+<BR>
+
 
 # RMC UMVCS
 
@@ -94,8 +135,11 @@ However, that is likely a subsection of a game. The rest of the game may still b
   - [Tests](#tests)
   - [Samples](#samples)
 - [Configuration](#configuration)
+- [Credits](#credits)
 
-<!-- toc -->
+<BR>
+<BR>
+
 
 ## How to use
 
@@ -155,6 +199,11 @@ Or to edit the `Packages/manifest.json` directly with your favorite text editor,
 }
 ```
 
+
+<BR>
+<BR>
+
+
 ### Tests
 
 The package can optionally be set as *testable*.
@@ -169,6 +218,11 @@ Open `Packages/manifest.json` with your favorite text editor. Add following line
 }
 ```
 
+
+<BR>
+<BR>
+
+
 ### Samples
 
 Some packages include optional samples with clear use cases. To import and run the samples:
@@ -180,6 +234,11 @@ Some packages include optional samples with clear use cases. To import and run t
 1. Select samples
 1. Import
 
+
+<BR>
+<BR>
+
+
 ## Configuration
 
 * `Unity Target` - [Standalone MAC/PC](https://support.unity.com/hc/en-us/articles/206336795-What-platforms-are-supported-by-Unity-)
@@ -188,26 +247,25 @@ Some packages include optional samples with clear use cases. To import and run t
 * `Unity Aspect Ratio` - Any [Unity Game View](https://docs.unity3d.com/Manual/GameView.html)
 
 
-Created By
-=============
+
+<BR>
+<BR>
+
+## Credits
+
+**Created By**
 
 - Samuel Asher Rivello 
-- Over 23 years XP with game development (2023)
-- Over 10 years XP with Unity (2023)
+- Over 25 years XP with game development (2024)
+- Over 11 years XP with Unity (2024)
 
-Contact
-=============
+**Contact**
 
 - Twitter - <a href="https://twitter.com/srivello/">@srivello</a>
+- Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - Resume & Portfolio - <a href="http://www.SamuelAsherRivello.com">SamuelAsherRivello.com</a>
-- Source Code on Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - LinkedIn - <a href="https://Linkedin.com/in/SamuelAsherRivello">Linkedin.com/in/SamuelAsherRivello</a> <--- Say Hello! :)
 
-License
-=============
+**License**
 
-Provided as-is under MIT License | Copyright © 2023 Rivello Multimedia Consulting, LLC
-
-
-
-
+Provided as-is under MIT License | Copyright © 2024 Rivello Multimedia Consulting, LLC
